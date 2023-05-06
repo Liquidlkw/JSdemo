@@ -1,0 +1,53 @@
+<!doctype html>
+<body>
+<div id="error"></div>
+
+<button id="button1"> 1</button>
+<br/>
+<button id="button2"> 2</button>
+<br/>
+<button id="button3"> 3</button>
+<br/>
+
+<script>
+var timeoutID;
+button1.onfocus = function() {
+    console.log("button1.onfocus");
+  if(timeoutID!=null) clearTimeout(timeoutID);
+  timeoutID= setTimeout(function myAlert() {
+  var startTime = new Date().getTime() + 2*1000;
+    while (new Date().getTime() < startTime) {}
+    alert('11111');
+}, 5000);
+
+
+};
+
+button2.onfocus = function() {
+  console.log("button2.onfocus");
+  if(timeoutID!=null) clearTimeout(timeoutID);
+  timeoutID = setTimeout(function myAlert() {
+  var startTime = new Date().getTime() + 2*1000;
+  while (new Date().getTime() < startTime) {}
+    alert('2222');
+}, 5000);
+};
+
+
+button3 .onfocus = function() {
+ console.log("button3.onfocus");
+ if(timeoutID!=null) clearTimeout(timeoutID);
+  timeoutID = setTimeout(function myAlert() {
+  var startTime = new Date().getTime() + 2*1000;
+  while (new Date().getTime() < startTime) {}
+    alert('33333');
+}, 5000);
+};
+
+
+
+
+
+
+</script>
+</body>
